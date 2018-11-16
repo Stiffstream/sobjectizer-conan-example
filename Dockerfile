@@ -8,7 +8,7 @@ RUN apt-get update && \
 RUN apt-get -qq -y install python3
 RUN apt-get -qq -y install python3-pip
 RUN pip3 install conan
-RUN conan remote add sobjectizer https://api.bintray.com/conan/stiffstream/sobjectizer
+RUN conan remote add stiffstream https://api.bintray.com/conan/stiffstream/public
 
 RUN mkdir sobjectizer-conan-example
 COPY hello_world.cpp sobjectizer-conan-example
@@ -22,5 +22,4 @@ RUN echo "*** Building an example ***" \
 	&& conan install .. --build=missing \
 	&& cmake .. \
 	&& cmake --build . --config Release
-
 
