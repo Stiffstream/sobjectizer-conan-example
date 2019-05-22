@@ -1,5 +1,5 @@
 [requires]
-sobjectizer/5.6.0@stiffstream/testing
+sobjectizer/5.6.0@stiffstream/stable
 
 [generators]
 cmake
