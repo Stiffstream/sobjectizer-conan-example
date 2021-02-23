@@ -1,14 +1,14 @@
-FROM ubuntu:19.04
+FROM ubuntu:20.04
 
 # Prepare build environment
-RUN apt-get update && \
-    apt-get -qq -y install gcc g++ \
+RUN apt-get update
+RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
+RUN apt-get -qq -y install gcc g++ \
     cmake curl wget pkg-config \
     libtool
 RUN apt-get -qq -y install python3
 RUN apt-get -qq -y install python3-pip
 RUN pip3 install conan
-RUN conan remote add stiffstream https://api.bintray.com/conan/stiffstream/public
 
 RUN mkdir sobjectizer-conan-example
 COPY hello_world.cpp sobjectizer-conan-example

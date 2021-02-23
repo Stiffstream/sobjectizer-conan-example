@@ -17,8 +17,6 @@ All necessary steps like installing Python, PIP, conan, CMake and so on are perf
 ## Manual Build
 To perform manual build it is necessary to have conan and CMake installed. Then you can do the following steps:
 ```bash
-# Add remote for conan to find sobjectizer package.
-conan remote add stiffstream https://api.bintray.com/conan/stiffstream/public
 # Clone the demo repository.
 git clone https://github.com/Stiffstream/sobjectizer-conan-example
 cd sobjectizer-conan-example
